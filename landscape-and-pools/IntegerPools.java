@@ -42,7 +42,7 @@ class IntegerPools {
 	landscape[2] = new Landscape(Arrays.asList(3,3,3,3,3,3,3,3,3,3,3));
 	landscape[3] = new Landscape(Arrays.asList(0,0,0,0,0,0,0,0,0,0,0));
 	landscape[4] = new Landscape(Arrays.asList(5,4,3,2,1,12,10,2,3,7,9));
-	landscape[5] = new Landscape(Arrays.asList(0,1,2,3,4,5,4,3,2,1,0));
+	landscape[5] = new Landscape(Arrays.asList(5,1,1,6,1,1,5));
 	for (int i = 0; i < landscape.length; i++) {
 	    System.out.println("--------------------------------------");
 	    System.out.println("Landscape with pools:");

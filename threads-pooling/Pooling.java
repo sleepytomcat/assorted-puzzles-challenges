@@ -6,7 +6,7 @@ class Pooling {
     public static void main(String[] args) throws InterruptedException {
 	BlockingQueue<Message> messages = new LinkedBlockingQueue<>();
 
-	for (int i = 0; i < 500; ++i) {
+	for (int i = 0; i < 2000; ++i) { // creating 2000 threads to process a large number of messages
 	    Thread thread = new Thread(new MessageProcessor(messages));
 	    thread.start();
 	}
@@ -38,7 +38,7 @@ class MessageProcessor implements Runnable {
 	while(true) 
 	    try {
 		Message message = messages.poll();
-		Thread.sleep(500);
+		Thread.sleep(500); // ...'processing' is mostly waiting/sleeping
 	    }
 	    catch (InterruptedException e) {
 		e.printStackTrace();
